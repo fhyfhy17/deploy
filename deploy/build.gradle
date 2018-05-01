@@ -18,7 +18,7 @@ dependencies {
 
 mainClassName = 'com.Main'
 
-task tar(type: Tar){
+task tar(type: Tar,dependsOn: "build"){
 	into('deploy/lib'){
 		from configurations.runtime
 	}
