@@ -1,0 +1,38 @@
+apply plugin: 'play'
+apply plugin: 'java'
+apply plugin: 'application'
+sourceSets {
+    main {
+        resources {
+            srcDir "resources"
+        }
+    }
+}
+repositories {
+    jcenter()
+}
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = 'com.Main'
+
+task tar(type: Tar){
+	into('deploy/lib'){
+		from configurations.runtime
+	}
+	from ('build/libs'){
+		into('deploy/lib')
+	}
+	
+	from ('build/resources/main'){
+		into('deploy/resources')
+	}
+}
+
+build.finalizedBy(tar)
+
+tasks.withType(JavaCompile) {
+options.encoding = "UTF-8"
+}
