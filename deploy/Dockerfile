@@ -5,4 +5,4 @@ ADD ./start.sh /data/server
 RUN chmod 755 /data/server/start.sh
 WORKDIR /data/server
 
-CMD  ["echo","run"]
+CMD  ["sh","start.sh"]
