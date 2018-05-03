@@ -1,8 +1,8 @@
 #!/bin/sh
 DEPLOY_DIR=`pwd`
 echo $DEPLOY_DIR
-STDOUT=`pwd`/stdout.log
-STDERR=`pwd`/stderr.log
+STDOUT=`pwd`/logs/stdout.log
+STDERR=`pwd`/logs/stderr.log
 APPID=got
 CLASS_PATH=./:./lib/*
 
