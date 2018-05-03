@@ -5,4 +5,4 @@ RUN chmod 755 /data/server/deploy/start.sh
 WORKDIR /data/server
 RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo $TZ > /etc/timezone
 
-ENTRYPOINT ["sh","/data/server/deploy/start.sh"]
+ENTRYPOINT ["/data/server/deploy/start.sh"]
