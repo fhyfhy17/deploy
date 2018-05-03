@@ -5,7 +5,7 @@ STDOUT=$pwd/logs/stdout.log
 STDERR=$pwd/logs/stderr.log
 test -d $pwd/logs/ || mkdir -p $pwd/logs
 APPID=got
-CLASS_PATH=$pwd/:./lib/*
+CLASS_PATH=$pwd/lib/*
 echo $CLASS_PATH
 MAIN_CLASS=com.Main
 RESOURCES_DIR=$pwd/resources          
