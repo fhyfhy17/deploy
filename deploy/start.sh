@@ -3,6 +3,7 @@ DEPLOY_DIR=`pwd`
 echo $DEPLOY_DIR
 STDOUT=`pwd`/logs/stdout.log
 STDERR=`pwd`/logs/stderr.log
+test -d `pwd`/logs/ || mkdir -p `pwd`/logs
 APPID=got
 CLASS_PATH=./:./lib/*
 
