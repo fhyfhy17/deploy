@@ -9,6 +9,7 @@ public class Main {
 	    while(true) {
 	        try {
 	            logger.info("日了狗了");
+	            
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
